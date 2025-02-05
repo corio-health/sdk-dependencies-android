@@ -1,0 +1,35 @@
+[versions]
+agp = "8.3.2"
+kotlin = "2.0.21"
+
+minSdk = "23"
+targetSdk = "34"
+compileSdk = "35"
+jvmTarget = "18"
+
+dependencies ="4.0.0"
+
+camera = "1.4.1"
+core-ktx = "1.15.0"
+appcompat = "1.7.0"
+coroutines = "1.6.4"
+
+[libraries]
+core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
+
+# Camera Libraries
+camera-camera2 = { group = "androidx.camera", name = "camera-camera2", version.ref = "camera" }
+camera-lifecycle = { group = "androidx.camera", name = "camera-lifecycle", version.ref = "camera" }
+camera-view = { group = "androidx.camera", name = "camera-view", version.ref = "camera" }
+camera-extensions = { group = "androidx.camera", name = "camera-extensions", version.ref = "camera" }
+
+[bundles]
+camera = ["camera-camera2", "camera-lifecycle", "camera-view", "camera-extensions"]
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+
