@@ -16,9 +16,10 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven { url = uri("https://jitpack.io") }
     }
 }
 
 rootProject.name = "Corio SDK Dependencies"
-include(":app")
-include(":dependencies")
+include(":headless")
+include(":visual")

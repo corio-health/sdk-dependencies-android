@@ -1,20 +1,18 @@
 plugins {
-    alias(libs.plugins.android.application)
+    alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
+    id("maven-publish")
 }
 
+
 android {
-    namespace = "de.corio.sdk.dependencies"
+    namespace = "corio.sdk.dependencies.headless"
     compileSdk = libs.versions.compileSdk.get().toInt()
 
     defaultConfig {
-        applicationId = "de.corio.sdk.dependencies"
         minSdk = libs.versions.minSdk.get().toInt()
-        targetSdk = libs.versions.targetSdk.get().toInt()
-        versionCode = 1
-        versionName = "1.0"
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
@@ -29,5 +27,26 @@ android {
     }
     kotlinOptions {
         jvmTarget = libs.versions.jvmTarget.get()
+    }
+}
+
+dependencies {
+    api(libs.core.ktx)
+    api(libs.appcompat)
+    api(libs.coroutines.core)
+    api(libs.bundles.camera)
+}
+
+publishing {
+    publications {
+        register<MavenPublication>("release") {
+            artifactId = "headless"
+            version = libs.versions.corioDependencies.get()
+
+            // Publish the AAR produced by this module
+            afterEvaluate {
+                from(components["release"])
+            }
+        }
     }
 }

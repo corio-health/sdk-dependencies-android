@@ -2,22 +2,35 @@
 agp = "8.3.2"
 kotlin = "2.0.21"
 
-minSdk = "23"
-targetSdk = "34"
+minSdk = "26"
 compileSdk = "35"
 jvmTarget = "18"
 
-dependencies ="4.0.0"
+corioDependencies ="2025-02-10"
 
 camera = "1.4.1"
 core-ktx = "1.15.0"
 appcompat = "1.7.0"
 coroutines = "1.6.4"
 
+fragment-ktx = "1.8.5"
+material = "1.12.0"
+lifecycle = "2.8.7"
+viewbinding-delegate = "1.5.8"
+
+mpandroidchart = "v3.1.0"
+dotsindicator = "4.3"
+lottie = "6.5.0"
+
 [libraries]
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
 appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
+fragment-ktx = { group = "androidx.fragment", name = "fragment-ktx", version.ref = "fragment-ktx" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+viewbinding-delegate = { group = "com.github.kirich1409", name = "viewbindingpropertydelegate", version.ref = "viewbinding-delegate" }
+lifecycle-livedata = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycle" }
+lifecycle-viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
 
 # Camera Libraries
 camera-camera2 = { group = "androidx.camera", name = "camera-camera2", version.ref = "camera" }
@@ -25,11 +38,15 @@ camera-lifecycle = { group = "androidx.camera", name = "camera-lifecycle", versi
 camera-view = { group = "androidx.camera", name = "camera-view", version.ref = "camera" }
 camera-extensions = { group = "androidx.camera", name = "camera-extensions", version.ref = "camera" }
 
+# Additional Libraries
+mpandroidchart = { group = "com.github.PhilJay", name = "MPAndroidChart", version.ref = "mpandroidchart" }
+dots-indicator = { group = "com.tbuonomo", name = "dotsindicator", version.ref = "dotsindicator" }
+lottie = { group = "com.airbnb.android", name = "lottie", version.ref = "lottie" }
+
 [bundles]
 camera = ["camera-camera2", "camera-lifecycle", "camera-view", "camera-extensions"]
 
 [plugins]
-android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 

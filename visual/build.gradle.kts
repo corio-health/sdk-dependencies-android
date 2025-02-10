@@ -1,13 +1,11 @@
 plugins {
-    id("com.android.library")
-    id("kotlin-android")
-    id("kotlin-parcelize")
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin.android)
     id("maven-publish")
 }
 
 android {
-    namespace = "de.corio.sdk.dependencies"
-    compileSdk = libs.versions.compileSdk.get().toInt()
+    namespace = "corio.sdk.dependencies.visual"
     compileSdk = libs.versions.compileSdk.get().toInt()
 
     defaultConfig {
@@ -34,16 +32,23 @@ android {
 dependencies {
     api(libs.core.ktx)
     api(libs.appcompat)
-    api(libs.coroutines.core)
-    api(libs.bundles.camera)
+    api(libs.fragment.ktx)
+    api(libs.material)
+    api(libs.viewbinding.delegate)
+
+    api(libs.lifecycle.livedata)
+    api(libs.lifecycle.viewmodel)
+
+    api(libs.dots.indicator)
+    api(libs.mpandroidchart)
+    api(libs.lottie)
 }
 
 publishing {
     publications {
-        create<MavenPublication>("release") {
-            groupId = "de.corio.sdk"
-            artifactId = "dependencies"
-            version = libs.versions.dependencies.get()
+        register<MavenPublication>("release") {
+            artifactId = "visual"
+            version = libs.versions.corioDependencies.get()
 
             // Publish the AAR produced by this module
             afterEvaluate {
