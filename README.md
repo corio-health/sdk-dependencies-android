@@ -1,4 +1,5 @@
 # Android Corio SDK Dependencies
+
 [![](https://jitpack.io/v/corio-health/sdk-dependencies-android.svg)](https://jitpack.io/#corio-health/sdk-dependencies-android)
 
 This library contains only the dependencies for the Corio SDK. It is used to keep the dependencies in one place and to avoid version conflicts.
@@ -7,24 +8,34 @@ Latest versions of the dependencies are defined in the [version catalog](https:/
 
 ## Usage
 
-Add the following lines to your root build.gradle:
-    
+Add the following lines to your settings.gradle:
+
 ```gradle
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         mavenCentral()
-        maven { url 'https://jitpack.io' }
+        maven { url = uri("https://jitpack.io") }
     }
 }
 ```
 
-Add the following lines to your project/build.gradle:
+Then, you can add the dependencies for the Headless SDK and Visual SDK.
+
+Add the following lines to your app/build.gradle:
 
 ```gradle
-# For Headless SDK
-implementation 'com.github.corio-health.sdk-dependencies-android:headless:$version'
+android {
+    buildFeatures {
+        viewBinding = true
+    }
+}
 
-# For Visual SDK
-implementation 'com.github.corio-health.sdk-dependencies-android:visual:$version'
+dependencies {
+    # For Headless SDK
+    implementation 'com.github.corio-health.sdk-dependencies-android:headless:$version'
+    
+    # For Visual SDK
+    implementation 'com.github.corio-health.sdk-dependencies-android:visual:$version'
+}
 ```
