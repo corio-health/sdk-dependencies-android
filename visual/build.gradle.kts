@@ -35,6 +35,7 @@ dependencies {
     api(libs.fragment.ktx)
     api(libs.material)
     api(libs.viewbinding.delegate)
+    api(libs.activity.ktx)
 
     api(libs.lifecycle.livedata)
     api(libs.lifecycle.viewmodel)
@@ -42,6 +43,7 @@ dependencies {
     api(libs.dots.indicator)
     api(libs.mpandroidchart)
     api(libs.lottie)
+    api(libs.sentry.android)
 }
 
 publishing {
