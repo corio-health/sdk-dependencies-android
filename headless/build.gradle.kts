@@ -35,6 +35,9 @@ dependencies {
     api(libs.appcompat)
     api(libs.coroutines.core)
     api(libs.bundles.camera)
+    api(libs.sentry.android)
+
+    api(libs.activity.ktx)
 }
 
 publishing {
