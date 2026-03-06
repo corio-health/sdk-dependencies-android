@@ -44,6 +44,8 @@ dependencies {
     api(libs.mpandroidchart)
     api(libs.lottie)
     api(libs.sentry.android)
+    api(libs.glide)
+    api(libs.bundles.exoplayer)
 }
 
 publishing {
