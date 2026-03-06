@@ -6,7 +6,7 @@ minSdk = "26"
 compileSdk = "35"
 jvmTarget = "18"
 
-corioDependencies ="2025-12-13"
+corioDependencies = "2026-03-06" # YYYY-MM-dd
 
 camera = "1.4.1"
 core-ktx = "1.15.0"
@@ -23,6 +23,8 @@ mpandroidchart = "v3.1.0"
 dotsindicator = "4.3"
 lottie = "6.5.0"
 sentry-android-version = "8.28.0"
+glide = "5.0.5"
+exoplayer = "1.9.2"
 
 [libraries]
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
@@ -34,6 +36,9 @@ material = { group = "com.google.android.material", name = "material", version.r
 viewbinding-delegate = { group = "com.github.kirich1409", name = "viewbindingpropertydelegate", version.ref = "viewbinding-delegate" }
 lifecycle-livedata = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycle" }
 lifecycle-viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
+glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
+exoplayer-core = { group = "androidx.media3", name = "media3-exoplayer", version.ref = "exoplayer" }
+exoplayer-ui = { group = "androidx.media3", name = "media3-ui", version.ref = "exoplayer" }
 
 # Camera Libraries
 camera-camera2 = { group = "androidx.camera", name = "camera-camera2", version.ref = "camera" }
@@ -49,6 +54,7 @@ sentry-android = { module = "io.sentry:sentry-android", version.ref = "sentry-an
 
 [bundles]
 camera = ["camera-camera2", "camera-lifecycle", "camera-view", "camera-extensions"]
+exoplayer = ["exoplayer-core", "exoplayer-ui"]
 
 [plugins]
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
