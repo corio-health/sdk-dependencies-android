@@ -6,7 +6,7 @@ minSdk = "26"
 compileSdk = "35"
 jvmTarget = "18"
 
-corioDependencies = "2026-03-06" # YYYY-MM-dd
+corioDependencies = "2026-05-05" # YYYY-MM-dd
 
 camera = "1.4.1"
 core-ktx = "1.15.0"
@@ -25,6 +25,8 @@ lottie = "6.5.0"
 sentry-android-version = "8.28.0"
 glide = "5.0.5"
 exoplayer = "1.9.2"
+commonmark = "0.24.0"
+junit = "4.13.2"
 
 [libraries]
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
@@ -51,6 +53,10 @@ mpandroidchart = { group = "com.github.PhilJay", name = "MPAndroidChart", versio
 dots-indicator = { group = "com.tbuonomo", name = "dotsindicator", version.ref = "dotsindicator" }
 lottie = { group = "com.airbnb.android", name = "lottie", version.ref = "lottie" }
 sentry-android = { module = "io.sentry:sentry-android", version.ref = "sentry-android-version" }
+commonmark = { group = "org.commonmark", name = "commonmark", version.ref = "commonmark" }
+
+# Test Libraries
+junit = { group = "junit", name = "junit", version.ref = "junit" }
 
 [bundles]
 camera = ["camera-camera2", "camera-lifecycle", "camera-view", "camera-extensions"]

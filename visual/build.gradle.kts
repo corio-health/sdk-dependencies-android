@@ -27,6 +27,8 @@ android {
     kotlinOptions {
         jvmTarget = libs.versions.jvmTarget.get()
     }
+
+    testOptions.unitTests.isReturnDefaultValues = true
 }
 
 dependencies {
@@ -46,6 +48,10 @@ dependencies {
     api(libs.sentry.android)
     api(libs.glide)
     api(libs.bundles.exoplayer)
+
+    implementation(libs.commonmark)
+
+    testImplementation(libs.junit)
 }
 
 publishing {
