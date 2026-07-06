@@ -6,7 +6,7 @@ minSdk = "26"
 compileSdk = "35"
 jvmTarget = "18"
 
-corioDependencies = "2026-05-05" # YYYY-MM-dd
+corioDependencies = "2026-07-06" # YYYY-MM-dd
 
 camera = "1.4.1"
 core-ktx = "1.15.0"
@@ -27,6 +27,7 @@ glide = "5.0.5"
 exoplayer = "1.9.2"
 commonmark = "0.24.0"
 junit = "4.13.2"
+kotlinx-serialization = "1.7.3"
 
 [libraries]
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
@@ -54,6 +55,7 @@ dots-indicator = { group = "com.tbuonomo", name = "dotsindicator", version.ref =
 lottie = { group = "com.airbnb.android", name = "lottie", version.ref = "lottie" }
 sentry-android = { module = "io.sentry:sentry-android", version.ref = "sentry-android-version" }
 commonmark = { group = "org.commonmark", name = "commonmark", version.ref = "commonmark" }
+kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
 
 # Test Libraries
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -65,4 +67,5 @@ exoplayer = ["exoplayer-core", "exoplayer-ui"]
 [plugins]
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "agp" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 

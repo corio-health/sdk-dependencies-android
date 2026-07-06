@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.serialization)
     id("maven-publish")
 }
 
@@ -36,6 +37,7 @@ dependencies {
     api(libs.coroutines.core)
     api(libs.bundles.camera)
     api(libs.sentry.android)
+    api(libs.kotlinx.serialization.json)
 
     api(libs.activity.ktx)
 }
