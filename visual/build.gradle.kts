@@ -57,6 +57,7 @@ dependencies {
 publishing {
     publications {
         register<MavenPublication>("release") {
+            groupId = "com.github.corio-health.sdk-dependencies-android"
             artifactId = "visual"
             version = libs.versions.corioDependencies.get()
 

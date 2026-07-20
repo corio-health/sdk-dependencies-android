@@ -1,15 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application>
-        <!-- DSN entry for GlitchTip -->
-        <meta-data
-            android:name="io.sentry.dsn"
-            android:value="https://95e54f57e8df4a68ab411e50c4a09ab7@glitchtip.app.corio.health/1"
-            />
-        <!-- Add data like request headers, user ip address and device name, see https://docs.sentry.io/platforms/android/data-management/data-collected/ for more info -->
-        <meta-data
-            android:name="io.sentry.send-default-pii"
-            android:value="true"
-            />
+        <meta-data android:name="io.sentry.auto-init" android:value="false" />
     </application>
 </manifest>
