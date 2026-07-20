@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application>
+        <!-- DEV-3986: the Corio SDK reports through a PRIVATE Sentry client it
+             builds in code (CorioSentryAnalytics). It must never auto-start the
+             process-global Sentry client, which would hijack a host app's own
+             Sentry setup. Disable sentry-android's manifest auto-init here. -->
         <meta-data android:name="io.sentry.auto-init" android:value="false" />
     </application>
 </manifest>
