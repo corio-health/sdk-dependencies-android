@@ -37,5 +37,8 @@ dependencies {
     
     # For Visual SDK
     implementation 'com.github.corio-health.sdk-dependencies-android:visual:$version'
+
+    # For the optional Visual SDK Compose tier (CorioStep)
+    implementation 'com.github.corio-health.sdk-dependencies-android:visual-compose:$version'
 }
 ```

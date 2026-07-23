@@ -23,3 +23,4 @@ dependencyResolutionManagement {
 rootProject.name = "Corio SDK Dependencies"
 include(":headless")
 include(":visual")
+include(":visual-compose")
