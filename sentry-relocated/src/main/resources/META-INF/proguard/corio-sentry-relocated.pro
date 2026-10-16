@@ -1,0 +1,2 @@
+-keep class de.corio.shaded.sentry.** { *; }
+-keep interface de.corio.shaded.sentry.** { *; }

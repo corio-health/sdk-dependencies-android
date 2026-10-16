@@ -4,6 +4,8 @@
 
 This library contains only the dependencies for the Corio SDK. It is used to keep the dependencies in one place and to avoid version conflicts.
 
+The `headless` artifact pulls in `sentry-relocated`, the Sentry Java core repackaged to `de.corio.shaded.sentry`. It does not add `io.sentry` artifacts, manifest entries or providers to the host app, so the host can use its own Sentry version.
+
 Latest versions of the dependencies are defined in the [version catalog](https://github.com/corio-health/sdk-dependencies-android/blob/master/gradle/libs.versions.toml) file.
 
 ## Usage
