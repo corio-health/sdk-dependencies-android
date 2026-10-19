@@ -45,7 +45,6 @@ dependencies {
     api(libs.dots.indicator)
     api(libs.mpandroidchart)
     api(libs.lottie)
-    api(libs.sentry.android)
     api(libs.glide)
     api(libs.bundles.exoplayer)
 

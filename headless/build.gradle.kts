@@ -36,7 +36,6 @@ dependencies {
     api(libs.appcompat)
     api(libs.coroutines.core)
     api(libs.bundles.camera)
-    api(libs.sentry.android)
     api(libs.kotlinx.serialization.json)
 
     api(libs.activity.ktx)
