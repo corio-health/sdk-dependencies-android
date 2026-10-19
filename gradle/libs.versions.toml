@@ -6,7 +6,7 @@ minSdk = "26"
 compileSdk = "35"
 jvmTarget = "18"
 
-corioDependencies = "2026-07-06" # YYYY-MM-dd
+corioDependencies = "2026-10-19" # YYYY-MM-dd
 
 camera = "1.4.1"
 core-ktx = "1.15.0"
